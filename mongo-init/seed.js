@@ -6,7 +6,8 @@ db.tasks.insertMany([
   { id: 3, name: 'Read a book',     status: 'done'    },
   { id: 4, name: 'Write report',    status: 'pending' },
   { id: 5, name: 'Clean the house', status: 'done'    },
-  { id: 6, name: 'Cook dinner',     status: 'pending' }
+  { id: 6, name: 'Cook dinner',     status: 'pending' },
+  { id: 7, name: 'Make Cloud Computting Lab', status: 'pending' }
 ]);
 print('Seed data inserted successfully');
 
