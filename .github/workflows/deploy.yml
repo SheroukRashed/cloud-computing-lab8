@@ -33,7 +33,7 @@ jobs:
           username: ubuntu
           key:      ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd ~/lab8-cicd
+            cd ~/cloud-computing-lab8
             git pull
             docker compose pull
             docker compose down
