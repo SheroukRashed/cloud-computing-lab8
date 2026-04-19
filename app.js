@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const os = require('os');
 
 const app = express();
 app.use(express.json());
@@ -20,7 +21,11 @@ const Task = mongoose.model('Task', taskSchema);
 app.get('/tasks', async (req, res) => {
   try {
     const tasks = await Task.find({}, { _id: 0, __v: 0 });
-    res.json(tasks);
+    const hostname = os.hostname();
+    res.json({
+      hostname: hostname,
+      tasks: tasks
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
